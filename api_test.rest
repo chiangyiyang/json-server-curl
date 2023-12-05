@@ -1,0 +1,42 @@
+
+### 使用 GET 方法，查詢資源(resource)內所有的項目(item)
+GET http://localhost:3000/posts
+
+
+### 使用 GET 方法，查詢資源內id為1的項目
+GET http://localhost:3000/posts/1
+
+
+### 使用 POST 方法，新增一個項目
+POST http://127.0.0.1:3000/posts HTTP/1.1
+content-type: application/json
+
+{
+    "title": "json-server is simple",
+    "author": "tester"
+}
+
+
+### 使用 PUT 方法，修改id為4的項目全部內容
+PUT http://127.0.0.1:3000/posts/4 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "json-server is NOT simple",
+    "author": "tester"
+}
+
+
+### 使用 PATCH 方法，修改id為4的項目部分內容
+PATCH http://127.0.0.1:3000/posts/4 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "json-server is VERY simple"
+}
+
+
+### 使使用 DELETE 方法，刪除id為4的項目
+DELETE http://127.0.0.1:3000/posts/4
+
+
